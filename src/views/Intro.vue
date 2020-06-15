@@ -1,10 +1,8 @@
 <template>
   <div class="main">
     <Header />
-    <ProgressBar value="5" />
-    <router-link class="nextChapter" to="/chap0">
-      <NextChapterButton msg="PASSER L'INTRODUCTION" />
-    </router-link>
+    <ProgressBar value="0" />
+    <NextChapterButton @click.native="$router.push({ path : 'chapitre/0' })" msg="PASSER L'INTRODUCTION"  />
     <!-- Pour tester il faut mettre un fichier "video.mp4" dans le dossier public -->
     <video :src="video" autoplay loop>
       Votre navigateur ne supporte pas la vidéo.

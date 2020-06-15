@@ -3,7 +3,7 @@
     <section class="container__top">
       <Header />
       <ProgressBar value="55" />
-      <router-link class="previousChapter" to="/chap3">
+      <router-link class="previousChapter" to="/chap/3">
         <ChapterTitleAndReturn
           currentChapter="04"
           chapter="07"
@@ -17,7 +17,7 @@
       text="Les coraux sont constitués de milliers de petits organismes appelés polybes, principalement formé d’une bouche et d’un estomac. Le squelette des polypes est constitué à l’exterieur de ses tissus et se compose de carbonate de calcium tout comme la roche calcaire. Le corail est également composé de micro algues qui vivent dans les cellules des polypes. Il est donc à la fois animal, minéral et végétale!"
     />
     <section class="container__bottom">
-      <router-link class="nextChapter" to="/chap5">
+      <router-link class="nextChapter" to="/chap/5">
         <NextChapterButton msg="PASSER AU CHAPITRE SUIVANT" />
       </router-link>
     </section>

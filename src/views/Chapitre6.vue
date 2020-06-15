@@ -3,7 +3,7 @@
     <section class="container__top">
       <Header />
       <ProgressBar value="85" />
-      <router-link class="previousChapter" to="/chap5">
+      <router-link class="previousChapter" to="/chap/5">
         <ChapterTitleAndReturn
           currentChapter="06"
           chapter="07"
@@ -13,7 +13,7 @@
       </router-link>
     </section>
     <section class="container__bottom">
-      <router-link class="nextChapter" to="/assos">
+      <router-link class="nextChapter" to="/assos/0">
         <NextChapterButton msg="PASSER AU CHAPITRE SUIVANT" />
       </router-link>
     </section>

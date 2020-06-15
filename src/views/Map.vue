@@ -23,7 +23,7 @@
       tabindex="0"
     ></iframe>
     <section class="container__bottom">
-      <router-link class="nextChapter" to="/chap1">
+      <router-link class="nextChapter" to="/chap/1">
         <NextChapterButton msg="PASSER AU CHAPITRE SUIVANT" />
       </router-link>
     </section>
@@ -37,7 +37,7 @@ import ChapterTitleAndReturn from "@/components/ChapterTitleAndReturn.vue";
 import NextChapterButton from "@/components/next-chapter_button.vue";
 
 export default {
-  name: "Chapitre1",
+  name: "Chapitre0",
   components: {
     Header,
     ProgressBar,
