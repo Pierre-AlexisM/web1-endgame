@@ -58,7 +58,7 @@ export default {
 @include desktop-large {
   .articleText {
     p {
-      height: 400px;
+      max-height: 400px;
       overflow: scroll;
       font-size: rem(18px);
       text-align: left;
