@@ -50,7 +50,6 @@ export default {
 body {
   position: relative;
   @include format_vw-vh;
-  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   object-fit: cover;

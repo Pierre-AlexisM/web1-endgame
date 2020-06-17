@@ -26,7 +26,6 @@ export default {
   hr {
     margin: 24px 0;
   }
-
   p {
     font-size: $mobileP;
     color: $white;
@@ -34,7 +33,6 @@ export default {
     margin: 24px 0px;
   }
 }
-
 @include tablet-up {
   .articleText {
     p {
