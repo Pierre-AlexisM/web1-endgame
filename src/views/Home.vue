@@ -25,7 +25,7 @@ export default {
   components: {
     Disclaimer,
     IntroductionTitle,
-    StartArticle
+    StartArticle,
   },
   data() {
     return {
