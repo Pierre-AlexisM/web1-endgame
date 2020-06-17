@@ -44,9 +44,7 @@ export default {
 <style scoped lang="scss">
 .wrapper {
   display: flex;
-  flex-direction: row;
-  width: 300vw;
-  transform: rotate(90deg) translateY(-100vh);
+  flex-direction: column;
   transform-origin: top left;
   background-image: url("tmp-background.jpg");
   background-size: cover;
@@ -54,9 +52,8 @@ export default {
 }
 
 .outer-wrapper {
-  width: 100vh;
-  height: 100vw;
-  transform: rotate(-90deg) translateX(-100vh);
+  width: 100vw;
+  height: 100vh;
   transform-origin: top left;
   overflow-y: scroll;
   overflow-x: hidden;
