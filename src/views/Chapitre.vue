@@ -109,6 +109,7 @@ export default {
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
           nextChapter: "Passer au chapitre suivant",
+          showButton1: true,
           showCarousel: false
         },
         "2": {
