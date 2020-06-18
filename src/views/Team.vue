@@ -19,6 +19,7 @@
         portfolioAR="anthony-roux.netlify.app"
       />
       <TeamCard
+        :photoSPS="data[0].picture"
         :nameSPS="data[0].name"
         :descriptionSPS="data[0].description"
         roleSPS="Développeur front-end et back-end"
