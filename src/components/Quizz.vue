@@ -4,31 +4,31 @@
       <p class="quizz__question">{{ question }}</p>
       <button
         id="resA"
-        @click="isFalse = !isFalse, isTrue = false"
+        @click="checkAnswer(1)"
         class="quizz__response"
       >{{ responseA }}</button>
       <button
         id="resB"
-        @click="isTrue = !isTrue, isFalse = false"
+        @click="checkAnswer(2)"
         class="quizz__response"
       >{{ responseB }}</button>
       <button
         id="resC"
-        @click="isFalse = !isFalse, isTrue = false"
+        @click="checkAnswer(3)"
         class="quizz__response"
       >{{ responseC }}</button>
       <button
         id="resD"
-        @click="isFalse = !isFalse, isTrue = false"
+        @click="checkAnswer(4)"
         class="quizz__response"
       >{{ responseD }}</button>
     </div>
     <VraiFaux
-      :state="data.quiz1.answer2State"
-      :answer="data.quiz1.quizAnswerTrueText"
+      state="True"
+      :answer="responseInfoTrue"
       :class="{ isVisible : isTrue }"
     />
-    <VraiFaux state="Faux" answer="lorem ipsum dolor si amhet" :class="{ isVisible : isFalse }" />
+    <VraiFaux state="Faux" :answer="responseInfoFalse" :class="{ isVisible : isFalse }" />
   </section>
 </template>
 
@@ -43,10 +43,17 @@ export default {
   },
   props: {
     question: String,
+    questionNumber: Number,
     responseA: String,
+    responseAState: Boolean,
     responseB: String,
+    responseBState: Boolean,
     responseC: String,
-    responseD: String
+    responseCState: Boolean,
+    responseD: String,
+    responseDState: Boolean,
+    responseInfoTrue: String,
+    responseInfoFalse: String
   },
   data() {
     return {
@@ -57,12 +64,52 @@ export default {
       currentChapitre: 0
     };
   },
+   methods: {
+    checkAnswer: function (answer) {
+      debugger;
+     if (answer === 1) {
+       let answerState = this.responseAState
+       if (answerState == true) {
+        this.isTrue = !this.isTrue
+        this.isFalse = false
+       } else {
+        this.isFalse = !this.isFalse
+        this.isTrue = false
+       }
+     } else if (answer === 2) {
+       let answerState = this.responseBState
+       if (answerState == true) {
+        this.isTrue = !this.isTrue
+        this.isFalse = false
+       } else {
+        this.isFalse = !this.isFalse
+        this.isTrue = false
+       }
+
+     } else if (answer === 3) {
+       let answerState = this.responseCState
+       if (answerState == true) {
+        this.isTrue = !this.isTrue
+        this.isFalse = false
+       } else {
+        this.isFalse = !this.isFalse
+        this.isTrue = false
+       }
+
+     } else if (answer === 4)  {
+       let answerState = this.responseDState
+       if (answerState == true) {
+        this.isTrue = !this.isTrue
+        this.isFalse = false
+       } else {
+        this.isFalse = !this.isFalse
+        this.isTrue = false
+       }
+     
+     }
+    }
+  },
   mounted() {
-    axios
-      .get(
-        "https://api.savethecorals.fr/api/page/" + (this.currentChapitre + 3)
-      )
-      .then(response => (this.data = response.data.data));
   }
 };
 </script>
