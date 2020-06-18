@@ -57,90 +57,72 @@ export default {
   font-family: $montserrat;
   padding: 24px;
   @include flexbox(column, space-between, inherit);
-
   @include tablet-up {
     height: 100%;
   }
-
   @include desktop-up {
     height: 95vh;
   }
 }
-
 .close {
   display: none;
 }
-
 svg {
   cursor: pointer;
 }
-
 .articleVideo {
   &__buttonsTop {
     margin: 0 0 24px 0;
     @include flexbox(row, space-between, center);
   }
-
   &__content {
     padding: 24px 0 0 0;
     height: 100%;
     min-height: 450px;
     @include flexbox(column, space-evenly, center);
-
     @include tablet-up {
       margin: 0 24px;
     }
-
     @include desktop-up {
       height: 100vh;
       @include flexbox(row, space-between, center);
     }
-
     .articleVideo__text {
       height: 100%;
       min-height: 500px;
       @include flexbox(column, center, flex-start);
-
       @include tablet-up {
         @include flexbox(column, center, flex-start);
       }
-
       @include desktop-up {
         height: 70vh;
         max-width: 40vw;
       }
-
       .title {
         margin: 0 0 24px 0;
         font: bold 5vw $montserrat;
         color: $yellow;
-
         @include tablet-up {
           font-size: rem(32px);
           margin: 0 0 32px 0;
         }
       }
-
       .paragraph {
         margin: 0 0 24px 0;
         font: normal 3.7vw / 1.5 $montserrat;
-
         @include tablet-up {
           font-size: rem(22px);
         }
-
         @include desktop-up {
           margin: 0 0 80px 0;
         }
       }
-
       .separator {
         margin: 0 0 24px 0;
         width: 50vw;
         max-width: 150px;
         height: 1px;
         background-color: $white;
-
         @include tablet-up {
           margin: 0 0 32px 0;
         }
@@ -149,13 +131,11 @@ svg {
         padding: 16px;
         width: 100%;
         @include flexbox(row, center, center);
-
         .quizzButton {
           margin: 0;
         }
       }
     }
-
     .articleVideo__video video {
       width: 100%;
       margin: 24px 0 24px 0;

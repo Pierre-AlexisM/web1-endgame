@@ -117,7 +117,6 @@ export default {
   width: 70px;
   height: 70px;
   position: absolute;
-  // top: calc(50% - 35px);
   left: 3%;
   transition: transform 0.3s ease-in-out;
   user-select: none;

@@ -52,7 +52,6 @@ export default {
   width: 100vw;
   height: 100vh;
 }
-
 .innerContainer {
   display: flex;
   flex-direction: column;
@@ -64,25 +63,21 @@ export default {
   @include background-boxes;
   border: solid $yellow 2px;
 }
-
 h1 {
   font-size: rem($mobileH2);
   color: $yellow;
   font-weight: bold;
   padding: 20px 0px 20px 0px;
 }
-
 p {
   max-width: 500px;
   color: $white;
   line-height: 1.5;
   padding-bottom: 16px;
 }
-
 span {
   font-weight: bold;
 }
-
 svg {
   margin: 16px 0;
 }

@@ -73,7 +73,6 @@ section {
     margin-bottom: 24px;
   }
 }
-
 .articleContent {
   width: 90vw;
   margin: auto;
@@ -86,7 +85,6 @@ section {
     display: flex;
     justify-content: space-between;
     margin: 0px 96px 0px 96px;
-
     .subContent {
       width: 50%;
       margin-left: 10vw;
@@ -97,22 +95,18 @@ section {
         max-width: 650px;
       }
     }
-
     .infos {
       width: 50%;
-
       h1 {
         font-size: rem(40px);
         text-align: left;
       }
-
       hr {
         width: 40%;
         display: block;
         margin: 16px 0 40px;
         text-align: left;
       }
-
       p {
         font-size: rem(18px);
         text-align: left;

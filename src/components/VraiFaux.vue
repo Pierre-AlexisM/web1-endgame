@@ -20,7 +20,6 @@ export default {
 
 <style scoped lang="scss">
 .container__vraiFaux {
-  //margin: 0 auto;
   position: absolute;
   left: 20vw;
   top: 30vh;
@@ -45,25 +44,21 @@ export default {
 .isVisible {
   transform: none;
 }
-
 .vraiFaux {
   &__containerState {
     margin-bottom: 16px;
     @include flexbox(row, space-between, center);
   }
-
   &__state {
     font: bold rem(24px) $montserrat;
     text-transform: uppercase;
   }
-
   &__bar {
     width: 35vw;
     max-width: 115px;
     height: 2px;
     background-color: $yellow;
   }
-
   &__answer {
     font: normal rem(14px) / 1.25 $montserrat;
     text-align: justify;

@@ -23,7 +23,6 @@ export default {
   font-size: $mobileP;
   font-family: $montserrat;
   font-weight: bold;
-
   &:hover {
     cursor: pointer;
     background-color: $blue;

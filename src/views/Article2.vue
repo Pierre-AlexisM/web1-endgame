@@ -57,13 +57,11 @@ export default {
   text-transform: uppercase;
   margin-bottom: 24px;
 }
-
 .buttons {
   display: flex;
   justify-content: space-between;
   padding: 16px 16px 0px 16px;
 }
-
 .background {
   min-height: 92.3%;
   width: 100vw;
@@ -73,19 +71,15 @@ export default {
   top: 0;
   bottom: 0;
   z-index: 2;
-
   @include tablet-up {
     min-height: 94.3%;
   }
 }
-
 .content {
   padding: 32px;
-
   .textContent {
     margin: 0 0 32px 0;
     @include flexbox(column, center, center);
-
     .articleText {
       text-align: left;
     }
@@ -95,7 +89,6 @@ export default {
   .content {
     padding: 48px 10vw 48px 10vw;
   }
-
   .quizzButton {
     margin-bottom: 48px;
   }
@@ -113,15 +106,12 @@ export default {
       margin: 0 32px 0 0;
       max-width: 40vw;
       @include flexbox(column, center, center);
-
       .articleText {
         text-align: left;
       }
     }
-
     .mediaContent {
       margin: 0 0 0 32px;
-
       img {
         min-width: 400px;
         max-width: 40vw;
@@ -129,7 +119,6 @@ export default {
     }
   }
 }
-
 @include desktop-Xlarge {
   .buttons {
     padding: 24px 32px 0px 24px;

@@ -27,7 +27,6 @@ export default {
 <style scoped lang="scss">
 .container__controlIcon {
   display: none;
-
   @include tablet-up {
     position: relative;
     z-index: 999;
@@ -44,7 +43,6 @@ export default {
   width: 35px;
   height: 35px;
 }
-
 .scroll_icon {
   margin-right: 12px;
 }
