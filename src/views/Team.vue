@@ -10,7 +10,6 @@
     <h1>Voici la team qui a participé à ce joli projet passionnant</h1>
     <section class="teams">
       <TeamCard
-        :photoAR="data[2].picture"
         :nameAR="data[2].name"
         :descriptionAR="data[2].description"
         roleAR="Développeur front-end et Designer"
@@ -19,7 +18,6 @@
         portfolioAR="anthony-roux.netlify.app"
       />
       <TeamCard
-        :photoSPS="data[0].picture"
         :nameSPS="data[0].name"
         :descriptionSPS="data[0].description"
         roleSPS="Développeur front-end et back-end"
@@ -32,31 +30,31 @@
         :descriptionPAM="data[3].description"
         rolePAM="Développeur front-end et Designer"
         skillsPAM="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
-        networkPAM="Anthony Roux"
-        portfolioPAM="anthony-roux.netlify.app"
+        networkPAM="Pierre-Alexis Maerten"
+        portfolioPAM=""
       />
       <TeamCard
         :nameAT="data[1].name"
         :descriptionAT="data[1].description"
         skillsAT="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
-        networkAT="Anthony Roux"
-        portfolioAT="anthony-roux.netlify.app"
+        networkAT="Annie Tran"
+        portfolioAT=""
       />
       <TeamCard
         :nameNJ="data[6].name"
         :descriptionNJ="data[6].description"
         roleNJ="Développeur front-end"
         skillsNJ="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
-        networkNJ="Anthony Roux"
-        portfolioNJ="anthony-roux.netlify.app"
+        networkNJ="Nicolas Jesenberger"
+        portfolioNJ=""
       />
       <TeamCard
         :nameAC="data[5].name"
         :descriptionAC="data[5].description"
         roleAC="Designer"
         skillsAC="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
-        networkAC="Anthony Roux"
-        portfolioAC="anthony-roux.netlify.app"
+        networkAC="Axel Charel"
+        portfolioAC=""
       />
     </section>
   </div>
