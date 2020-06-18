@@ -6,6 +6,7 @@
           class="name"
         >{{ nameAR }} {{ nameSPS }} {{ namePAM }} {{ nameAT }} {{ nameNJ }} {{ nameAC }}</p>
         <div src alt class="photo" />
+        {{ photonAR }} {{ photoSPS }} {{ photoPAM }} {{ photoAT }} {{ photonNJ }} {{ photoAC }}
       </div>
       <div class="teamCard__separator"></div>
       <div class="teamCard__text">
@@ -37,6 +38,12 @@
 export default {
   name: "TeamCard",
   props: {
+    photoAR: String,
+    photoSPS: String,
+    photoPAM: String,
+    photoAT: String,
+    photoNJ: String,
+    photoAC: String,
     nameAR: String,
     nameSPS: String,
     namePAM: String,

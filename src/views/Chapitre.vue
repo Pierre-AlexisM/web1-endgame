@@ -12,6 +12,11 @@
       <router-link :to="{ name: 'article', params: { number: currentChapitre }}">
         <ButtonSvg class="coralButton" />
       </router-link>
+      <!-- testbutton -->
+      <router-link :to="{ name: 'article', params: { number: currentChapitre }}"> 
+        <ButtonSvg class="coralButton2"
+        />
+      </router-link>
       <router-link
         class="previousChapter"
         :to="{ name: 'chapitre', params: { number: currentChapitre - 1 }}"
@@ -84,6 +89,7 @@ export default {
           reviewChapter: "Revoir l'introduction",
           redirectionPageTo: "/intro",
           nextChapter: "Passer au chapitre suivant",
+          buttonSvg2: false,
           iframe:
             "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156449.32414891524!2d152.61685865575492!3d-22.309161340170448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6be685c1eee86d69%3A0x6ceefcee6bc6dead!2sDicks%20Reef!5e1!3m2!1sfr!2sfr!4v1591974235777!5m2!1sfr!2sfr"
         },
@@ -115,7 +121,8 @@ export default {
           reviewChapter: "Revoir le chapitre précédent",
           redirectionPageTo: "/chap2",
           nextChapter: "Passer au chapitre suivant",
-          pathNextChapter: "/chap4"
+          pathNextChapter: "/chap4",
+          ButtonSvg2: null,
         },
         "4": {
           currentChapter: "04",
@@ -226,6 +233,13 @@ progress[value][data-v-c55e1cb4] {
   position: fixed;
   right: 5vw;
   top: 10vh;
+  z-index: 1;
+}
+
+.coralButton2 {
+  position: fixed;
+  left: 30vw;
+  top: 30vh;
   z-index: 1;
 }
 
