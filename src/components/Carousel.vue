@@ -17,6 +17,7 @@
 <script>
 import CoralGuardian from "@/assets/img/coral-guardian.png";
 import Ifrecor from "@/assets/img/ifrecor.png";
+// import ChasingCoral from "@/assets/img/chasing-coral.png";
 
 export default {
     name: "Carousel",
@@ -29,6 +30,7 @@ export default {
             slides: [
             { img: CoralGuardian},
             { img: Ifrecor },
+            // { img: ChansingCoral},
             ]
         }
   },

@@ -9,6 +9,7 @@
     <section class="container__top">
       <Header />
       <ProgressBar :value="chapitres[currentChapitre].value" />
+      <div><Caroussel /></div>
       <router-link :to="{ name: 'article', params: { number: currentChapitre }}">
         <ButtonSvg class="coralButton" />
       </router-link>
@@ -61,6 +62,7 @@ import ChapterTitleAndReturn from "@/components/ChapterTitleAndReturn.vue";
 import NextChapterButton from "@/components/next-chapter_button.vue";
 import ButtonSvg from "@/components/ButtonSvg";
 import axios from "axios";
+// import Carousel from "@/components/Carousel.vue";
 export default {
   name: "Chapitre",
   components: {
@@ -68,7 +70,8 @@ export default {
     ProgressBar,
     ChapterTitleAndReturn,
     NextChapterButton,
-    ButtonSvg
+    ButtonSvg,
+    // Carousel,
   },
   data() {
     return {
@@ -146,6 +149,17 @@ export default {
           redirectionPageTo: "/chap5",
           nextChapter: "Passer au chapitre suivant",
           pathNextChapter: "/assos"
+        },
+        "7": {
+          currentChapitre:"07",
+          chapter:"07",
+          value: 100,
+          title: null,
+          reviewChapter: "Revoie le chapitre précédent",
+          redirectionPageTo:"/chap6",
+          nextChapter:"Passer au chapitre suivant",
+          pathNextChapter:"/intro",
+          // carousel:true,
         }
       }
     };
@@ -168,6 +182,7 @@ export default {
             this.chapitres[4].title = response.data.data.title;
             this.chapitres[5].title = response.data.data.title;
             this.chapitres[6].title = response.data.data.title;
+            this.chapitres[7].title = response.data.data.title;
           });
         //  console.log(this.$el.querySelector("video"))
         //  .play();
