@@ -8,18 +8,20 @@
     </div>
     <div class="content">
       <div class="textContent">
-        <ArticleText
-          :title="data.article1.title"
-          :text="data.article1.text"
-        />
+        <ArticleText :title="data.article1.title" :text="data.article1.text" />
         <router-link :to="{ name: 'quizz', params: { number: currentChapitre }}">
           <StartButton class="quizzButton" msg="répondre au quizz" v-if="isClose" />
         </router-link>
       </div>
       <div class="mediaContent">
-        <img :src="data.article1.picture1">
-        <img :src="data.article1.picture2">
-        <video :src="data.article1.video" autoplay loop>Votre navigateur ne supporte pas la vidéo.</video>
+        <img v-if="!!data.article1.picture1" :src="data.article1.picture1" />
+        <img v-if="!!data.article1.picture2" :src="data.article1.picture2" />
+        <video
+          v-if="!!data.article1.video"
+          :src="data.article1.video"
+          autoplay
+          loop
+        >Votre navigateur ne supporte pas la vidéo.</video>
       </div>
     </div>
   </div>
@@ -46,51 +48,14 @@ export default {
       currentChapitre: this.$route.params.number,
       isClose: true,
       data: null,
-      article: {
-
-      },
-      articles: {
-        "0": {
-          video: true,
-          picture1: null,
-          picture2: null
-        },
-        "1": {
-          video: null,
-          picture1: true,
-          picture2: true
-        },
-        "2": {
-          video: true,
-          picture1: null,
-          picture2: null
-        },
-        "3": {
-          video: null,
-          picture1: true,
-          picture2: null
-        },
-        "4": {
-          video: null,
-          picture1: true,
-          picture2: null
-        },
-        "5": {
-          video: null,
-          picture1: true,
-          picture2: true
-        },
-        "6": {
-          video: null,
-          picture1: true,
-          picture2: true
-        },
-      }
+      article: {}
     };
   },
   mounted() {
     axios
-      .get("https://api.savethecorals.fr/api/page/" + (this.currentChapitre + 3))
+      .get(
+        "https://api.savethecorals.fr/api/page/" + (this.currentChapitre + 3)
+      )
       .then(response => {
         this.data = response.data.data;
       });
@@ -168,14 +133,13 @@ export default {
     }
 
     .mediaContent {
-
       video {
         height: 100vh;
         max-width: 50vw;
       }
 
       img {
-        margin: 0  40px 32px;
+        margin: 0 40px 32px;
         height: 350px;
         width: 35vw;
       }
@@ -184,12 +148,6 @@ export default {
 }
 
 @include desktop-Xlarge {
-  // .mediaContent {
-  //   img {
-  //     min-width: 800px;
-  //   }
-  // }
-
   .buttons {
     padding: 24px 32px 0px 24px;
   }
