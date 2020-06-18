@@ -14,7 +14,7 @@
         :descriptionAR="data[2].description"
         roleAR="Développeur front-end et Designer"
         skillsAR="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
-        networkAR="Anthony Roux"
+        networkAR="anthony-roux-2603"
         portfolioAR="anthony-roux.netlify.app"
       />
       <TeamCard
@@ -22,7 +22,7 @@
         :descriptionSPS="data[0].description"
         roleSPS="Développeur front-end et back-end"
         skillsSPS="HTML-CSS | PHP | JS | React.js | Vue.js | ELM | Design UX et UI "
-        networkSPS="Sentiany Sumampow"
+        networkSPS="sentiany-priska-sumampow"
         portfolioSPS="sentiany.fr"
       />
       <TeamCard
@@ -30,12 +30,13 @@
         :descriptionPAM="data[3].description"
         rolePAM="Développeur front-end et Designer"
         skillsPAM="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
-        networkPAM="Pierre-Alexis Maerten"
+        networkPAM="pierre-alexis-maerten"
         portfolioPAM
       />
       <TeamCard
         :nameAT="data[1].name"
         :descriptionAT="data[1].description"
+        roleAT="Développeur front-end et Designer"
         skillsAT="HTML-CSS | JS | SASS | Vue.js | Design UX et UI"
         networkAT="Annie Tran"
         portfolioAT
