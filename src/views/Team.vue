@@ -10,49 +10,49 @@
     <h1>Voici la team qui a participé à ce joli projet passionnant</h1>
     <section class="teams">
       <TeamCard
-        nameAR="Anthony Roux"
-        descriptionAR="Étudiant Héticien de 27 ans, Développeur front-end possédant une subtile sensibilité pour le design UX et UI le jour , et dresseur de chats noir le soir."
+        :photoAR="data[2].picture"
+        :nameAR="data[2].name"
+        :descriptionAR="data[2].description"
         roleAR="Développeur front-end et Designer"
         skillsAR="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
         networkAR="Anthony Roux"
         portfolioAR="anthony-roux.netlify.app"
       />
       <TeamCard
-        nameSPS="Sentiany Priska Sumampow"
-        descriptionSPS="Étudiant Héticien de 27 ans, Développeur front-end possédant une subtile sensibilité pour le design  UI le jour , et dresseur de chats noir le soir."
-        roleSPS="Développeur front-end et Designer"
-        skillsSPS="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
-        networkSPS="Anthony Roux"
-        portfolioSPS="anthony-roux.netlify.app"
+        :nameSPS="data[0].name"
+        :descriptionSPS="data[0].description"
+        roleSPS="Développeur front-end et back-end"
+        skillsSPS="HTML-CSS | PHP | JS | React.js | Vue.js | ELM | Design UX et UI "
+        networkSPS="Sentiany Sumampow"
+        portfolioSPS="sentiany.fr"
       />
       <TeamCard
-        namePAM="P.A Maerten"
-        descriptionPAM="Étudiant Héticien de 27 ans, Développeur front-end possédant une subtile sensibilité pour le design UX et UI le jour , et dresseur de chats noir le soir."
+        :namePAM="data[3].name"
+        :descriptionPAM="data[3].description"
         rolePAM="Développeur front-end et Designer"
         skillsPAM="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
         networkPAM="Anthony Roux"
         portfolioPAM="anthony-roux.netlify.app"
       />
       <TeamCard
-        nameAT="Annie Tran"
-        descriptionAT="Étudiant Héticien de 27 ans, Développeur front-end possédant une subtile sensibilité pour le design UX et UI le jour , et dresseur de chats noir le soir."
-        roleAT="Développeur front-end et Designer"
+        :nameAT="data[1].name"
+        :descriptionAT="data[1].description"
         skillsAT="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
         networkAT="Anthony Roux"
         portfolioAT="anthony-roux.netlify.app"
       />
       <TeamCard
-        nameNJ="Nicolas Jesenberger"
-        descriptionNJ="Étudiant Héticien de 27 ans, Développeur front-end possédant une subtile sensibilité pour le design UX et UI le jour , et dresseur de chats noir le soir."
-        roleNJ="Développeur front-end et Designer"
+        :nameNJ="data[6].name"
+        :descriptionNJ="data[6].description"
+        roleNJ="Développeur front-end"
         skillsNJ="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
         networkNJ="Anthony Roux"
         portfolioNJ="anthony-roux.netlify.app"
       />
       <TeamCard
-        nameAC="Axel Charel"
-        descriptionAC="Étudiant Héticien de 27 ans, Développeur front-end possédant une subtile sensibilité pour le design UX et UI le jour , et dresseur de chats noir le soir."
-        roleAC="Développeur front-end et Designer"
+        :nameAC="data[5].name"
+        :descriptionAC="data[5].description"
+        roleAC="Designer"
         skillsAC="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
         networkAC="Anthony Roux"
         portfolioAC="anthony-roux.netlify.app"
@@ -80,7 +80,7 @@ export default {
   },
   mounted() {
     axios
-      .get("https://api.savethecorals.fr/api/page/3")
+      .get("https://api.savethecorals.fr/api/team")
       .then(response => (this.data = response.data.data));
   }
 };

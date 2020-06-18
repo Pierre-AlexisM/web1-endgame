@@ -9,12 +9,21 @@
     <section class="container__top">
       <Header />
       <ProgressBar :value="chapitres[currentChapitre].value" />
+      <div><Caroussel /></div>
       <router-link :to="{ name: 'article', params: { number: currentChapitre }}">
         <ButtonSvg class="coralButton" />
       </router-link>
+<<<<<<< HEAD
       <div v-if="chapitres[currentChapitre].showCarousel">
         <Carousel />
       </div>
+=======
+      <!-- testbutton -->
+      <router-link :to="{ name: 'article', params: { number: currentChapitre }}"> 
+        <ButtonSvg class="coralButton2"
+        />
+      </router-link>
+>>>>>>> bbad91a246de5eaf343dad073d08747f0ae5e48b
       <router-link
         class="previousChapter"
         :to="{ name: 'chapitre', params: { number: currentChapitre - 1 }}"
@@ -64,7 +73,11 @@ import ChapterTitleAndReturn from "@/components/ChapterTitleAndReturn.vue";
 import NextChapterButton from "@/components/next-chapter_button.vue";
 import ButtonSvg from "@/components/ButtonSvg";
 import axios from "axios";
+<<<<<<< HEAD
 import Carousel from "@/components/Carousel.vue"
+=======
+// import Carousel from "@/components/Carousel.vue";
+>>>>>>> bbad91a246de5eaf343dad073d08747f0ae5e48b
 export default {
   name: "Chapitre",
   components: {
@@ -73,7 +86,11 @@ export default {
     ChapterTitleAndReturn,
     NextChapterButton,
     ButtonSvg,
+<<<<<<< HEAD
     Carousel
+=======
+    // Carousel,
+>>>>>>> bbad91a246de5eaf343dad073d08747f0ae5e48b
   },
   data() {
     return {
@@ -89,6 +106,7 @@ export default {
           reviewChapter: "Revoir l'introduction",
           redirectionPageTo: "/intro",
           nextChapter: "Passer au chapitre suivant",
+          buttonSvg2: false,
           iframe:
             "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156449.32414891524!2d152.61685865575492!3d-22.309161340170448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6be685c1eee86d69%3A0x6ceefcee6bc6dead!2sDicks%20Reef!5e1!3m2!1sfr!2sfr!4v1591974235777!5m2!1sfr!2sfr",
           showCarousel: false
@@ -118,7 +136,12 @@ export default {
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
           nextChapter: "Passer au chapitre suivant",
+<<<<<<< HEAD
           showCarousel: false
+=======
+          pathNextChapter: "/chap4",
+          ButtonSvg2: null,
+>>>>>>> bbad91a246de5eaf343dad073d08747f0ae5e48b
         },
         "4": {
           currentChapter: "04",
@@ -145,6 +168,7 @@ export default {
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
           nextChapter: "Passer au chapitre suivant",
+<<<<<<< HEAD
           showCarousel: false
         },
         "7": {
@@ -157,6 +181,20 @@ export default {
           nextChapter: "Au revoir",
           pathNextChapter: null,
           showCarousel: true
+=======
+          pathNextChapter: "/assos"
+        },
+        "7": {
+          currentChapitre:"07",
+          chapter:"07",
+          value: 100,
+          title: null,
+          reviewChapter: "Revoie le chapitre précédent",
+          redirectionPageTo:"/chap6",
+          nextChapter:"Passer au chapitre suivant",
+          pathNextChapter:"/intro",
+          // carousel:true,
+>>>>>>> bbad91a246de5eaf343dad073d08747f0ae5e48b
         }
       }
     };
@@ -179,6 +217,7 @@ export default {
             this.chapitres[4].title = response.data.data.title;
             this.chapitres[5].title = response.data.data.title;
             this.chapitres[6].title = response.data.data.title;
+            this.chapitres[7].title = response.data.data.title;
           });
         //  console.log(this.$el.querySelector("video"))
         //  .play();
@@ -237,6 +276,13 @@ progress[value][data-v-c55e1cb4] {
   position: fixed;
   right: 5vw;
   top: 10vh;
+  z-index: 1;
+}
+
+.coralButton2 {
+  position: fixed;
+  left: 30vw;
+  top: 30vh;
   z-index: 1;
 }
 
