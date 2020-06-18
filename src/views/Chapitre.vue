@@ -14,7 +14,7 @@
         <ButtonSvg class="coralButton" />
       </router-link>
 
-      <router-link :to="{ name: 'article', params: { number: currentChapitre }}">
+      <router-link :to="{ name: 'article2', params: { number: currentChapitre }}">
         <ButtonSvg2 v-if="chapitres[currentChapitre].showButton2" class="coralButton2" />
       </router-link>
       <div v-if="chapitres[currentChapitre].showCarousel">
@@ -128,7 +128,7 @@ export default {
           reviewChapter: "Revoir le chapitre précédent",
           nextChapter: "Passer au chapitre suivant",
           pathNextChapter: "/chap4",
-          showButton2: false,
+          showButton2: true,
           ButtonSvg2: null,
           showCarousel: false
         },
