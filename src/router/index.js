@@ -6,6 +6,7 @@ import Intro from "../views/Intro.vue";
 import map from "@/views/Map.vue";
 import Chapitre from "@/views/Chapitre.vue";
 import Article from "@/views/Article.vue";
+import Article2 from "@/views/Article2.vue";
 import Quizz from "@/views/Quizz.vue";
 import VraiFaux from "@/components/VraiFaux.vue";
 import Assos from "@/views/Assos.vue";
@@ -48,6 +49,27 @@ const routes = [{
         path: "article",
         name: "article",
         component: Article
+      },
+      {
+        path: "/quizz/:number",
+        name: "quizz",
+        component: Quizz
+      },
+      {
+        path: "/vraifaux/:number",
+        name: "vraifaux",
+        component: VraiFaux
+      }
+    ]
+  },
+  {
+    path: "/chapitre/:number",
+    name: "chapitre",
+    component: Chapitre,
+    children: [{
+        path: "article2",
+        name: "article2",
+        component: Article2
       },
       {
         path: "/quizz/:number",
