@@ -97,10 +97,8 @@ export default {
     max-width: 450px;
     height: auto;
     min-height: 440px;
-    // max-height: 390px;
     margin: 24px;
     @include background-boxes;
-
     @include tablet-up {
       width: 450px;
       height: 480px;
@@ -109,7 +107,6 @@ export default {
   &__content {
     .teamCard__namePhotoContainer {
       @include flexbox(column, space-between, center);
-
       .name {
         margin: 16px 0 0 0;
         order: 1;
@@ -117,7 +114,6 @@ export default {
         font: bold rem(20px) $montserrat;
         text-align: center;
       }
-
       .photo {
         width: 90px;
         height: 90px;
@@ -128,9 +124,7 @@ export default {
 
     .teamCard__separator {
       display: none;
-
       @include tablet-up {
-        // margin: 0 0 32px 0;
         margin: 16px 0;
         width: 100vw;
         max-width: 150px;
@@ -138,11 +132,9 @@ export default {
         background-color: $white;
       }
     }
-
     .teamCard__text {
       margin: 24px 0 0 0;
       @include flexbox(column, space-evenly, flex-start);
-
       .description,
       .role,
       .skills,
@@ -151,7 +143,6 @@ export default {
         margin: 6px 0 6px 0;
         font: normal rem(16px) / 1.5 $montserrat;
       }
-
       span {
         color: $yellow;
         font-weight: 600;

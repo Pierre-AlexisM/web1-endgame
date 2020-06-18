@@ -36,29 +36,24 @@ div {
   width: 100vw;
   height: 100vh;
 }
-
 h1 {
   color: $white;
   font-size: 11vw;
   font-weight: bold;
   padding: 2vw;
   text-align: left;
-
   @include desktop-up {
     font-size: 5vw;
   }
 }
-
 #coral-svg {
   width: 46vw;
   height: 16vw;
-
   @include desktop-up {
     width: 12vw;
     height: 8vw;
   }
 }
-
 .coral-svg_path {
   fill: $yellow;
 }

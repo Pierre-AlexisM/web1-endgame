@@ -22,11 +22,9 @@ export default {
     font: bold rem(20px) / 1.3 $montserrat;
     color: $yellow;
   }
-
   hr {
     margin: 24px 0;
   }
-
   p {
     font-size: $mobileP;
     color: $white;
@@ -34,7 +32,6 @@ export default {
     margin: 24px 0px;
   }
 }
-
 @include tablet-up {
   .articleText {
     p {
@@ -46,7 +43,6 @@ export default {
       font-size: rem(40px);
       text-align: left;
     }
-
     hr {
       width: 40%;
       display: block;
@@ -61,19 +57,17 @@ export default {
       height: auto;
       max-height: 50vh;
       overflow: auto;
-                &::-webkit-scrollbar {
-                    width: 8px;
-
-                &-track {
-                    background-color: $white;
-                    border-radius: 10px;
-                }
-
-                &-thumb {
-                    background-color: $blue;
-                    border-radius: 10px;
-                }
-                }
+      &::-webkit-scrollbar {
+        width: 8px;
+        &-track {
+          background-color: $white;
+          border-radius: 10px;
+        }
+        &-thumb {
+          background-color: $blue;
+          border-radius: 10px;
+        }
+      }
       font-size: rem(18px);
       text-align: left;
       padding-bottom: 24px;
@@ -82,7 +76,6 @@ export default {
       font-size: rem(40px);
       text-align: left;
     }
-
     hr {
       width: 40%;
       display: block;

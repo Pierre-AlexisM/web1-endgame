@@ -241,30 +241,24 @@ header {
     height: 5vh;
   }
 }
-
 .links {
   display: flex;
 }
-
 .link {
   color: $white;
   font-weight: bold;
   margin: 0px 32px;
   cursor: pointer;
-
   svg {
     margin: 0px 8px;
   }
-
   &:hover {
     color: $yellow;
-
     svg > * {
       fill: $yellow;
     }
   }
 }
-
 .link-about-desktop {
   @media (max-width: 520px) {
     display: none;
@@ -273,63 +267,51 @@ header {
 
 svg:hover {
   cursor: pointer;
-
   & > * {
     fill: $yellow;
   }
 }
-
 .link-about-mobile {
   display: none;
-
   @media (max-width: 520px) {
     display: flex;
     position: absolute;
     right: 0;
   }
 }
-
 .controls {
   display: flex;
   align-items: center;
-
   @media (max-width: 520px) {
     display: none;
   }
 }
-
 .desktop {
   @media (max-width: 520px) {
     display: none;
   }
 }
-
 .mobile {
   display: none;
-
   @media (max-width: 520px) {
     display: flex;
   }
 }
-
 .video-controls {
   display: flex;
   align-items: center;
   position: absolute;
   right: 0;
   margin-right: 20px;
-
   @media (max-width: 520px) {
     margin-right: 0px;
     right: 50%;
     transform: translateX(50%);
   }
-
   svg {
     margin: 0px 16px;
   }
 }
-//
 .controls-window {
   display: flex;
   justify-content: space-around;
@@ -342,12 +324,10 @@ svg:hover {
   width: 180px;
   height: 80px;
   background-color: $backgroundBoxes;
-
   @media (max-width: 520px) {
     display: none;
   }
 }
-
 .hidden {
   display: none;
 }

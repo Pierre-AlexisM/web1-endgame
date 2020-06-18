@@ -64,7 +64,6 @@ export default {
   width: 100vw;
   height: 100vh;
 }
-
 .innerContainer {
   width: 90%;
   max-width: 815px;
@@ -72,14 +71,12 @@ export default {
   border: solid $yellow 2px;
   @include background-boxes;
 }
-
 h1 {
   font-size: rem($mobileH2);
   color: $yellow;
   font-weight: 600;
   padding: 20px 0px 20px 0px;
 }
-
 p {
   color: $white;
   line-height: 1.5;

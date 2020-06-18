@@ -29,26 +29,21 @@ export default {
   border-right: none;
   z-index: 1;
   cursor: pointer;
-
   &:hover {
     border: 1px solid $yellow;
     border-right: none;
-
     p {
       color: $yellow;
     }
-
     svg > * {
       fill: $yellow;
     }
   }
-
   @media (max-width: 520px) {
     padding: 3vw 4vw;
     font-size: 3vw;
 	}
 }
-
 p {
   font-weight: bold;
   color: $white;

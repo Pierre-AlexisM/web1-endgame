@@ -24,17 +24,14 @@ export default {
         @include background-boxes;
         width: 240px;
         height: 320px;
-
         .innerContainer {
             padding: 16px 8px 16px 16px;
-
             h1 {
             font-size: rem($mobileH2);
             color: $white;
             font-weight: 600;
             padding:8px 0px 20px 0px;
             }
-
             .textContainer {
                 height: 200px;
                 overflow: auto;
@@ -45,13 +42,11 @@ export default {
                     background-color: $white;
                     border-radius: 10px;
                 }
-
                 &-thumb {
                     background-color: $blue;
                     border-radius: 10px;
                 }
             }
-
                 p {
                 font-size: rem($mobileP);
                 color: $white;
@@ -62,6 +57,4 @@ export default {
             }
         }
     }
-
-    // ceci est un test
 </style>

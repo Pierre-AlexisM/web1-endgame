@@ -20,9 +20,8 @@ export default {
 
 <style scoped lang="scss">
 .container__vraiFaux {
-  //margin: 0 auto;
   position: absolute;
-  left: -35vw;
+  left: 20vw;
   top: 30vh;
   z-index: 999;
   width: 250px;
@@ -32,34 +31,41 @@ export default {
   transition: 250ms;
   transform: translateX(-500vw);
   @include background-boxes;
+
+  @include tablet-up {
+    left: 35vw;
+  }
+  @include desktop-up {
+    left: -35vw;
+  }
 }
 
 // ajouter cette classe au container parent pour voir apparaitre la div depuis un translateX.
 .isVisible {
   transform: none;
 }
-
 .vraiFaux {
   &__containerState {
     margin-bottom: 16px;
     @include flexbox(row, space-between, center);
   }
-
   &__state {
     font: bold rem(24px) $montserrat;
     text-transform: uppercase;
   }
-
   &__bar {
     width: 35vw;
     max-width: 115px;
     height: 2px;
     background-color: $yellow;
   }
-
   &__answer {
     font: normal rem(14px) / 1.25 $montserrat;
     text-align: justify;
+
+    @include tablet-up {
+      text-align: left;
+    }
   }
 }
 </style>

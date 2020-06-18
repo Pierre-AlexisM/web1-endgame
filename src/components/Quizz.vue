@@ -35,7 +35,6 @@
 <script>
 import VraiFaux from "@/components/VraiFaux.vue";
 import axios from "axios";
-
 export default {
   name: "Quizz",
   components: {
@@ -60,7 +59,6 @@ export default {
       data: false,
       isTrue: false,
       isFalse: false,
-      // state: false,
       currentChapitre: 0
     };
   },
@@ -125,7 +123,6 @@ export default {
   z-index: 999;
   @include background-boxes;
   border-radius: 0;
-
   @include tablet-up {
     margin-top: 5.75vh;
     height: 94.3vh;
@@ -141,11 +138,9 @@ export default {
   max-width: 475px;
   max-height: 475px;
   @include flexbox(column, space-evenly, center);
-
   @include tablet-up {
     height: 475px;
   }
-
   @include desktop-up {
     margin: 12vh auto;
     width: 40vw;
@@ -154,7 +149,6 @@ export default {
     max-height: 615px;
   }
 }
-
 .quizz {
   &__question {
     margin: 24px 0 24px 0;
@@ -164,12 +158,10 @@ export default {
     font-weight: 600;
     line-height: 1.5;
     color: $yellow;
-
     @include tablet-up {
       font-size: rem(28px);
     }
   }
-
   &__response {
     width: 100%;
     height: 48px;
@@ -180,13 +172,11 @@ export default {
     line-height: 1.25;
     border: none;
     @include background-boxes;
-
     &:focus {
       border: 1px solid $yellow;
       transition: 250ms;
       color: $yellow;
     }
-
     @include tablet-up {
       font-size: rem(20px);
       height: 70px;
