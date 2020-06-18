@@ -13,11 +13,6 @@
       <router-link :to="{ name: 'article', params: { number: currentChapitre }}">
         <ButtonSvg class="coralButton" />
       </router-link>
-      <!-- testbutton -->
-      <router-link :to="{ name: 'article', params: { number: currentChapitre }}"> 
-        <ButtonSvg class="coralButton2"
-        />
-      </router-link>
       <router-link
         class="previousChapter"
         :to="{ name: 'chapitre', params: { number: currentChapitre - 1 }}"
