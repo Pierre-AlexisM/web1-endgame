@@ -5,10 +5,17 @@
     </router-link>
     <Quizz
       :question="data.quiz1.question"
+      :questionNumber=1
       :responseA="data.quiz1.answer1Text"
+      :responseAState="data.quiz1.answer1State"
       :responseB="data.quiz1.answer2Text"
+      :responseBState="data.quiz1.answer2State"
       :responseC="data.quiz1.answer3Text"
+      :responseCState="data.quiz1.answer3State"
       :responseD="data.quiz1.answer4Text"
+      :responseDState="data.quiz1.answer4State"
+      :responseInfoTrue="data.quiz1.quizAnswerTrueText"
+      :responseInfoFalse="data.quiz1.quizAnswerFalseText"
     />
     <VraiFaux state="Vrai" answer="lorem ipsum dolor si amhet" />
   </div>
