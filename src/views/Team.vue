@@ -14,7 +14,7 @@
         :descriptionAR="data[2].description"
         roleAR="Développeur front-end et Designer"
         skillsAR="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
-        networkAR="Anthony Roux"
+        networkAR="anthony-roux-2603"
         portfolioAR="anthony-roux.netlify.app"
       />
       <TeamCard
@@ -22,7 +22,7 @@
         :descriptionSPS="data[0].description"
         roleSPS="Développeur front-end et back-end"
         skillsSPS="HTML-CSS | PHP | JS | React.js | Vue.js | ELM | Design UX et UI "
-        networkSPS="Sentiany Sumampow"
+        networkSPS="sentiany-priska-sumampow"
         portfolioSPS="sentiany.fr"
       />
       <TeamCard
@@ -36,25 +36,26 @@
       <TeamCard
         :nameAT="data[1].name"
         :descriptionAT="data[1].description"
-        skillsAT="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
+        roleAT="Développeur front-end et Designer"
+        skillsAT="HTML-CSS | JS | SASS | Vue.js | Design UX et UI"
         networkAT="Annie Tran"
-        portfolioAT=""
+        portfolioAT
       />
       <TeamCard
         :nameNJ="data[6].name"
         :descriptionNJ="data[6].description"
         roleNJ="Développeur front-end"
-        skillsNJ="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
+        skillsNJ
         networkNJ="Nicolas Jesenberger"
-        portfolioNJ=""
+        portfolioNJ
       />
       <TeamCard
         :nameAC="data[5].name"
         :descriptionAC="data[5].description"
         roleAC="Designer"
-        skillsAC="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
+        skillsAC="Figma, Adobes, Sketch, UX/UI"
         networkAC="Axel Charel"
-        portfolioAC=""
+        portfolioAC
       />
     </section>
   </div>

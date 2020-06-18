@@ -84,6 +84,7 @@ export default {
   top: 0;
   bottom: 0;
   z-index: 2;
+  overflow: scroll;
 
   @include tablet-up {
     min-height: 94.3%;
@@ -99,6 +100,10 @@ export default {
     .articleText {
       text-align: left;
     }
+  }
+
+  video {
+    width: 100%;
   }
 }
 @include tablet-up {
@@ -129,9 +134,11 @@ export default {
       }
     }
     .mediaContent {
+      margin: 0 0 0 32px;
+
       video {
-        height: 100vh;
-        max-width: 50vw;
+        height: 90%;
+        max-width: 45vw;
       }
 
       img {

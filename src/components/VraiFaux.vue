@@ -22,7 +22,7 @@ export default {
 .container__vraiFaux {
   //margin: 0 auto;
   position: absolute;
-  left: -35vw;
+  left: 20vw;
   top: 30vh;
   z-index: 999;
   width: 250px;
@@ -32,6 +32,13 @@ export default {
   transition: 250ms;
   transform: translateX(-500vw);
   @include background-boxes;
+
+  @include tablet-up {
+    left: 35vw;
+  }
+  @include desktop-up {
+    left: -35vw;
+  }
 }
 
 // ajouter cette classe au container parent pour voir apparaitre la div depuis un translateX.
@@ -60,6 +67,10 @@ export default {
   &__answer {
     font: normal rem(14px) / 1.25 $montserrat;
     text-align: justify;
+
+    @include tablet-up {
+      text-align: left;
+    }
   }
 }
 </style>
