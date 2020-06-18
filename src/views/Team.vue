@@ -30,8 +30,8 @@
         :descriptionPAM="data[3].description"
         rolePAM="Développeur front-end et Designer"
         skillsPAM="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
-        networkPAM="pierre-alexis-maerten"
-        portfolioPAM
+        networkPAM="Pierre-Alexis Maerten"
+        portfolioPAM="https://pa-portfolio.netlify.app/"
       />
       <TeamCard
         :nameAT="data[1].name"
