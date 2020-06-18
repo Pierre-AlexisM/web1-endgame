@@ -13,6 +13,10 @@
       <router-link :to="{ name: 'article', params: { number: currentChapitre }}">
         <ButtonSvg class="coralButton" />
       </router-link>
+
+      <router-link :to="{ name: 'article2', params: { number: currentChapitre }}">
+        <ButtonSvg2 v-if="chapitres[currentChapitre].showButton2" class="coralButton2" />
+      </router-link>
       <div v-if="chapitres[currentChapitre].showCarousel">
         <Carousel />
       </div>
@@ -64,6 +68,7 @@ import ProgressBar from "@/components/ProgressBar.vue";
 import ChapterTitleAndReturn from "@/components/ChapterTitleAndReturn.vue";
 import NextChapterButton from "@/components/next-chapter_button.vue";
 import ButtonSvg from "@/components/ButtonSvg";
+import ButtonSvg2 from "@/components/ButtonSvg2";
 import axios from "axios";
 import Carousel from "@/components/Carousel.vue"
 export default {
@@ -74,6 +79,7 @@ export default {
     ChapterTitleAndReturn,
     NextChapterButton,
     ButtonSvg,
+    ButtonSvg2,
     Carousel
   },
   data() {
@@ -90,7 +96,7 @@ export default {
           reviewChapter: "Revoir l'introduction",
           redirectionPageTo: "/intro",
           nextChapter: "Passer au chapitre suivant",
-          buttonSvg2: false,
+          showButton2: false,
           iframe:
             "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156449.32414891524!2d152.61685865575492!3d-22.309161340170448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6be685c1eee86d69%3A0x6ceefcee6bc6dead!2sDicks%20Reef!5e1!3m2!1sfr!2sfr!4v1591974235777!5m2!1sfr!2sfr",
           showCarousel: false
@@ -109,6 +115,7 @@ export default {
           chapter: "07",
           value: 35,
           title: null,
+          showButton2: false,
           reviewChapter: "Revoir le chapitre précédent",
           nextChapter: "Passer au chapitre suivant",
           showCarousel: false
@@ -121,6 +128,7 @@ export default {
           reviewChapter: "Revoir le chapitre précédent",
           nextChapter: "Passer au chapitre suivant",
           pathNextChapter: "/chap4",
+          showButton2: true,
           ButtonSvg2: null,
           showCarousel: false
         },
@@ -131,6 +139,7 @@ export default {
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
           nextChapter: "Passer au chapitre suivant",
+          showButton2: false,
           showCarousel: false
         },
         "5": {
@@ -140,6 +149,7 @@ export default {
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
           nextChapter: "Passer au chapitre suivant",
+          showButton2: true,
           showCarousel: false
         },
         "6": {
@@ -149,6 +159,7 @@ export default {
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
           nextChapter: "Passer au chapitre suivant",
+          showButton2: false,
           showCarousel: false
         },
         "7": {
@@ -158,7 +169,12 @@ export default {
           title: "Soutenez les associations",
           reviewChapter: "Revoir le chapitre précédent",
           redirectionPageTo: "/chap5",
+<<<<<<< HEAD
           nextChapter: "AU REVOIR !",
+=======
+          showButton2: false,
+          nextChapter: "Au revoir",
+>>>>>>> page-team
           pathNextChapter: null,
           showCarousel: true
         }
