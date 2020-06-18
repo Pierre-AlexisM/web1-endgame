@@ -2,17 +2,39 @@
   <section class="container__background">
     <div class="container quizz">
       <p class="quizz__question">{{ question }}</p>
-      <button id="resA" @click="isFalse = !isFalse" class="quizz__response">{{ responseA }}</button>
-      <button id="resB" @click="isTrue = !isTrue" class="quizz__response">{{ responseB }}</button>
-      <button id="resC" @click="isFalse = !isFalse" class="quizz__response">{{ responseC }}</button>
-      <button id="resD" @click="isFalse = !isFalse" class="quizz__response">{{ responseD }}</button>
+      <button
+        id="resA"
+        @click="isFalse = !isFalse, isTrue = false"
+        class="quizz__response"
+      >{{ responseA }}</button>
+      <button
+        id="resB"
+        @click="isTrue = !isTrue, isFalse = false"
+        class="quizz__response"
+      >{{ responseB }}</button>
+      <button
+        id="resC"
+        @click="isFalse = !isFalse, isTrue = false"
+        class="quizz__response"
+      >{{ responseC }}</button>
+      <button
+        id="resD"
+        @click="isFalse = !isFalse, isTrue = false"
+        class="quizz__response"
+      >{{ responseD }}</button>
     </div>
-    <VraiFaux state="Vrai" answer="lorem ipsum dolor si amhet" :class="{ isVisible : isTrue }" />
+    <VraiFaux
+      :state="data.quiz1.answer2State"
+      :answer="data.quiz1.quizAnswerTrueText"
+      :class="{ isVisible : isTrue }"
+    />
+    <VraiFaux state="Faux" answer="lorem ipsum dolor si amhet" :class="{ isVisible : isFalse }" />
   </section>
 </template>
 
 <script>
 import VraiFaux from "@/components/VraiFaux.vue";
+import axios from "axios";
 
 export default {
   name: "Quizz",
@@ -28,17 +50,20 @@ export default {
   },
   data() {
     return {
+      data: false,
       isTrue: false,
-      isFalse: false
+      isFalse: false,
+      // state: false,
+      currentChapitre: 0
     };
+  },
+  mounted() {
+    axios
+      .get(
+        "https://api.savethecorals.fr/api/page/" + (this.currentChapitre + 3)
+      )
+      .then(response => (this.data = response.data.data));
   }
-  // methods: {
-  //   isTrue: function() {
-  //     this.selected = document
-  //       .querySelector("vraiFaux")
-  //       .classList.add("isVisible");
-  //   }
-  // }
 };
 </script>
 
