@@ -13,17 +13,14 @@
       <router-link :to="{ name: 'article', params: { number: currentChapitre }}">
         <ButtonSvg class="coralButton" />
       </router-link>
-<<<<<<< HEAD
       <div v-if="chapitres[currentChapitre].showCarousel">
         <Carousel />
       </div>
-=======
       <!-- testbutton -->
       <router-link :to="{ name: 'article', params: { number: currentChapitre }}"> 
         <ButtonSvg class="coralButton2"
         />
       </router-link>
->>>>>>> bbad91a246de5eaf343dad073d08747f0ae5e48b
       <router-link
         class="previousChapter"
         :to="{ name: 'chapitre', params: { number: currentChapitre - 1 }}"
@@ -73,11 +70,7 @@ import ChapterTitleAndReturn from "@/components/ChapterTitleAndReturn.vue";
 import NextChapterButton from "@/components/next-chapter_button.vue";
 import ButtonSvg from "@/components/ButtonSvg";
 import axios from "axios";
-<<<<<<< HEAD
 import Carousel from "@/components/Carousel.vue"
-=======
-// import Carousel from "@/components/Carousel.vue";
->>>>>>> bbad91a246de5eaf343dad073d08747f0ae5e48b
 export default {
   name: "Chapitre",
   components: {
@@ -86,11 +79,7 @@ export default {
     ChapterTitleAndReturn,
     NextChapterButton,
     ButtonSvg,
-<<<<<<< HEAD
     Carousel
-=======
-    // Carousel,
->>>>>>> bbad91a246de5eaf343dad073d08747f0ae5e48b
   },
   data() {
     return {
@@ -136,12 +125,9 @@ export default {
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
           nextChapter: "Passer au chapitre suivant",
-<<<<<<< HEAD
-          showCarousel: false
-=======
           pathNextChapter: "/chap4",
           ButtonSvg2: null,
->>>>>>> bbad91a246de5eaf343dad073d08747f0ae5e48b
+          showCarousel: false
         },
         "4": {
           currentChapter: "04",
@@ -168,7 +154,6 @@ export default {
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
           nextChapter: "Passer au chapitre suivant",
-<<<<<<< HEAD
           showCarousel: false
         },
         "7": {
@@ -181,20 +166,6 @@ export default {
           nextChapter: "Au revoir",
           pathNextChapter: null,
           showCarousel: true
-=======
-          pathNextChapter: "/assos"
-        },
-        "7": {
-          currentChapitre:"07",
-          chapter:"07",
-          value: 100,
-          title: null,
-          reviewChapter: "Revoie le chapitre précédent",
-          redirectionPageTo:"/chap6",
-          nextChapter:"Passer au chapitre suivant",
-          pathNextChapter:"/intro",
-          // carousel:true,
->>>>>>> bbad91a246de5eaf343dad073d08747f0ae5e48b
         }
       }
     };

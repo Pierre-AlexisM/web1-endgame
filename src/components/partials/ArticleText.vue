@@ -60,7 +60,20 @@ export default {
     p {
       height: auto;
       max-height: 400px;
-      overflow: scroll;
+      overflow: auto;
+                &::-webkit-scrollbar {
+                    width: 8px;
+
+                &-track {
+                    background-color: $white;
+                    border-radius: 10px;
+                }
+
+                &-thumb {
+                    background-color: $blue;
+                    border-radius: 10px;
+                }
+                }
       font-size: rem(18px);
       text-align: left;
       padding-bottom: 24px;
