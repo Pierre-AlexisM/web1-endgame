@@ -261,6 +261,7 @@ progress[value][data-v-c55e1cb4] {
   right: 5vw;
   top: 10vh;
   z-index: 1;
+  @include scale-animation-medium
 }
 
 .coralButton2 {
@@ -268,6 +269,7 @@ progress[value][data-v-c55e1cb4] {
   left: 30vw;
   top: 30vh;
   z-index: 1;
+  @include scale-animation-medium
 }
 
 .container__top {

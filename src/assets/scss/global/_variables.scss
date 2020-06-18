@@ -135,3 +135,12 @@ $desktop-megaLarge_2368: 2368px;
     transform: scale(1.02);
   }
 }
+
+@mixin scale-animation-medium {
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+}
