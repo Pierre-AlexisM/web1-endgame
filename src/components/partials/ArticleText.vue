@@ -59,7 +59,7 @@ export default {
   .articleText {
     p {
       height: auto;
-      max-height: 400px;
+      max-height: 50vh;
       overflow: auto;
                 &::-webkit-scrollbar {
                     width: 8px;
