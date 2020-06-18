@@ -25,7 +25,7 @@ export default {
   components: {
     Disclaimer,
     IntroductionTitle,
-    StartArticle,
+    StartArticle
   },
   data() {
     return {
@@ -35,7 +35,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://167.71.55.113/api/page/03")
+      .get("https://api.savethecorals.fr/api/page/03")
       .then(response => (this.data = response.data.data));
   }
 };
@@ -44,7 +44,9 @@ export default {
 <style scoped lang="scss">
 .wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  width: 300vw;
+  transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
   background-image: url("tmp-background.jpg");
   background-size: cover;
@@ -52,8 +54,9 @@ export default {
 }
 
 .outer-wrapper {
-  width: 100vw;
-  height: 100vh;
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
   transform-origin: top left;
   overflow-y: scroll;
   overflow-x: hidden;

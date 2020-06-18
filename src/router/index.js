@@ -7,6 +7,7 @@ import map from "@/views/Map.vue";
 import Chapitre from "@/views/Chapitre.vue";
 import Article from "@/views/Article.vue";
 import Quizz from "@/views/Quizz.vue";
+import VraiFaux from "@/components/VraiFaux.vue";
 import Assos from "@/views/Assos.vue";
 
 Vue.use(VueRouter);
@@ -14,8 +15,7 @@ Vue.use(VueRouter);
 // C'est dans la constante routes que vous définisez les différentes routes de votre projet
 // Chaque route doivent avoir au minimum un path et un component associé
 // blabla
-const routes = [
-  {
+const routes = [{
     path: "/",
     name: "Home",
     component: Home,
@@ -44,8 +44,7 @@ const routes = [
     path: "/chapitre/:number",
     name: "chapitre",
     component: Chapitre,
-    children: [
-      {
+    children: [{
         path: "article",
         name: "article",
         component: Article
@@ -54,6 +53,11 @@ const routes = [
         path: "/quizz/:number",
         name: "quizz",
         component: Quizz
+      },
+      {
+        path: "/vraifaux/:number",
+        name: "vraifaux",
+        component: VraiFaux
       }
     ]
   }

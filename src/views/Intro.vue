@@ -29,7 +29,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://167.71.55.113/api/page/2")
+      .get("https://api.savethecorals.fr/api/page/2")
       .then((response) => (this.video = response.data.data.video));
     document.querySelector('video').play();
   },

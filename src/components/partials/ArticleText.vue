@@ -58,6 +58,7 @@ export default {
 @include desktop-large {
   .articleText {
     p {
+      height: auto;
       max-height: 400px;
       overflow: scroll;
       font-size: rem(18px);

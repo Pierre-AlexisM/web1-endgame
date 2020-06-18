@@ -1,5 +1,5 @@
 <template>
-  <div class="container vraiFaux">
+  <div class="container__vraiFaux vraiFaux">
     <div class="vraiFaux__containerState">
       <p class="vraiFaux__state">{{ state }}</p>
       <div class="vraiFaux__bar"></div>
@@ -19,8 +19,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.container {
+.container__vraiFaux {
   //margin: 0 auto;
+  position: absolute;
+  left: -35vw;
+  top: 30vh;
+  z-index: 999;
   width: 250px;
   height: 250px;
   padding: 16px;
