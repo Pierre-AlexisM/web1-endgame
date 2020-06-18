@@ -30,7 +30,7 @@
     </section>
     <section class="container__bottom">
       <router-link :to="{ name: 'chapitre', params: { number: currentChapitre + 1 }}">
-        <NextChapterButton msg="PASSER AU CHAPITRE SUIVANT" />
+        <NextChapterButton :msg="chapitres[currentChapitre].nextChapter" />
       </router-link>
     </section>
 
@@ -158,7 +158,7 @@ export default {
           title: "Soutenez les associations",
           reviewChapter: "Revoir le chapitre précédent",
           redirectionPageTo: "/chap5",
-          nextChapter: "Au revoir",
+          nextChapter: "AU REVOIR !",
           pathNextChapter: null,
           showCarousel: true
         }

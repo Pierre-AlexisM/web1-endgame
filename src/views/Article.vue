@@ -17,7 +17,7 @@
         </router-link>
       </div>
       <div class="mediaContent">
-        <img src="@/assets/img/background-temporaire-chap1.png" />
+        <video :src="data.article1.video" autoplay loop>Votre navigateur ne supporte pas la vidéo.</video>
       </div>
     </div>
   </div>
@@ -39,6 +39,7 @@ export default {
   },
   data() {
     return {
+      linkVideo: null,
       currentChapitre: this.$route.params.number,
       isClose: true,
       data: null,
@@ -47,7 +48,9 @@ export default {
   mounted() {
     axios
       .get("https://api.savethecorals.fr/api/page/" + (this.currentChapitre + 3))
-      .then(response => (this.data = response.data.data));
+      .then(response => {
+        this.data = response.data.data;
+      });
   }
 };
 </script>
@@ -122,9 +125,14 @@ export default {
     }
 
     .mediaContent {
-      margin: 0 0 0 32px;
+
+      video {
+        height: 100vh;
+        max-width: 50vw;
+      }
 
       img {
+        margin: 0 0 0 32px;
         min-width: 400px;
         max-width: 40vw;
       }
