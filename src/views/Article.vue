@@ -17,6 +17,8 @@
         </router-link>
       </div>
       <div class="mediaContent">
+        <img :src="data.article1.picture1">
+        <img :src="data.article1.picture2">
         <video :src="data.article1.video" autoplay loop>Votre navigateur ne supporte pas la vidéo.</video>
       </div>
     </div>
@@ -31,6 +33,7 @@ import ArticleText from "@/components/partials/ArticleText.vue";
 import axios from "axios";
 
 export default {
+  name: "article",
   components: {
     StartButton,
     CrossButtonSvg,
@@ -43,6 +46,46 @@ export default {
       currentChapitre: this.$route.params.number,
       isClose: true,
       data: null,
+      article: {
+
+      },
+      articles: {
+        "0": {
+          video: true,
+          picture1: null,
+          picture2: null
+        },
+        "1": {
+          video: null,
+          picture1: true,
+          picture2: true
+        },
+        "2": {
+          video: true,
+          picture1: null,
+          picture2: null
+        },
+        "3": {
+          video: null,
+          picture1: true,
+          picture2: null
+        },
+        "4": {
+          video: null,
+          picture1: true,
+          picture2: null
+        },
+        "5": {
+          video: null,
+          picture1: true,
+          picture2: true
+        },
+        "6": {
+          video: null,
+          picture1: true,
+          picture2: true
+        },
+      }
     };
   },
   mounted() {
@@ -132,9 +175,9 @@ export default {
       }
 
       img {
-        margin: 0 0 0 32px;
-        min-width: 400px;
-        max-width: 40vw;
+        margin: 0  40px 32px;
+        height: 350px;
+        width: 35vw;
       }
     }
   }
