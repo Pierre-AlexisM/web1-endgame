@@ -31,30 +31,30 @@
         rolePAM="Développeur front-end et Designer"
         skillsPAM="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
         networkPAM="Pierre-Alexis Maerten"
-        portfolioPAM=""
+        portfolioPAM
       />
       <TeamCard
         :nameAT="data[1].name"
         :descriptionAT="data[1].description"
-        skillsAT="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
+        skillsAT="HTML-CSS | JS | SASS | Vue.js | Design UX et UI"
         networkAT="Annie Tran"
-        portfolioAT=""
+        portfolioAT
       />
       <TeamCard
         :nameNJ="data[6].name"
         :descriptionNJ="data[6].description"
         roleNJ="Développeur front-end"
-        skillsNJ="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
+        skillsNJ
         networkNJ="Nicolas Jesenberger"
-        portfolioNJ=""
+        portfolioNJ
       />
       <TeamCard
         :nameAC="data[5].name"
         :descriptionAC="data[5].description"
         roleAC="Designer"
-        skillsAC="HTML-CSS | Pug | JS | SASS | Vue.js | Design UX et UI"
+        skillsAC="Figma, Adobes, Sketch, UX/UI"
         networkAC="Axel Charel"
-        portfolioAC=""
+        portfolioAC
       />
     </section>
   </div>
