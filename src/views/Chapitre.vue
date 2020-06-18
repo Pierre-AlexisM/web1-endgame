@@ -12,6 +12,9 @@
       <router-link :to="{ name: 'article', params: { number: currentChapitre }}">
         <ButtonSvg class="coralButton" />
       </router-link>
+      <div v-if="chapitres[currentChapitre].showCarousel">
+        <Carousel />
+      </div>
       <router-link
         class="previousChapter"
         :to="{ name: 'chapitre', params: { number: currentChapitre - 1 }}"
@@ -61,6 +64,7 @@ import ChapterTitleAndReturn from "@/components/ChapterTitleAndReturn.vue";
 import NextChapterButton from "@/components/next-chapter_button.vue";
 import ButtonSvg from "@/components/ButtonSvg";
 import axios from "axios";
+import Carousel from "@/components/Carousel.vue"
 export default {
   name: "Chapitre",
   components: {
@@ -68,7 +72,8 @@ export default {
     ProgressBar,
     ChapterTitleAndReturn,
     NextChapterButton,
-    ButtonSvg
+    ButtonSvg,
+    Carousel
   },
   data() {
     return {
@@ -85,7 +90,8 @@ export default {
           redirectionPageTo: "/intro",
           nextChapter: "Passer au chapitre suivant",
           iframe:
-            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156449.32414891524!2d152.61685865575492!3d-22.309161340170448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6be685c1eee86d69%3A0x6ceefcee6bc6dead!2sDicks%20Reef!5e1!3m2!1sfr!2sfr!4v1591974235777!5m2!1sfr!2sfr"
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156449.32414891524!2d152.61685865575492!3d-22.309161340170448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6be685c1eee86d69%3A0x6ceefcee6bc6dead!2sDicks%20Reef!5e1!3m2!1sfr!2sfr!4v1591974235777!5m2!1sfr!2sfr",
+          showCarousel: false
         },
         "1": {
           currentChapter: "01",
@@ -93,9 +99,8 @@ export default {
           value: 25,
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
-          redirectionPageTo: "/chap0",
           nextChapter: "Passer au chapitre suivant",
-          pathNextChapter: "/chap2"
+          showCarousel: false
         },
         "2": {
           currentChapter: "02",
@@ -103,9 +108,8 @@ export default {
           value: 35,
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
-          redirectionPageTo: "/chap1",
           nextChapter: "Passer au chapitre suivant",
-          pathNextChapter: "/chap3"
+          showCarousel: false
         },
         "3": {
           currentChapter: "03",
@@ -113,9 +117,8 @@ export default {
           value: 50,
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
-          redirectionPageTo: "/chap2",
           nextChapter: "Passer au chapitre suivant",
-          pathNextChapter: "/chap4"
+          showCarousel: false
         },
         "4": {
           currentChapter: "04",
@@ -123,9 +126,8 @@ export default {
           value: 60,
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
-          redirectionPageTo: "/chap3",
           nextChapter: "Passer au chapitre suivant",
-          pathNextChapter: "/chap5"
+          showCarousel: false
         },
         "5": {
           currentChapter: "05",
@@ -133,9 +135,8 @@ export default {
           value: 75,
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
-          redirectionPageTo: "/chap4",
           nextChapter: "Passer au chapitre suivant",
-          pathNextChapter: "/chap6"
+          showCarousel: false
         },
         "6": {
           currentChapter: "06",
@@ -143,9 +144,19 @@ export default {
           value: 90,
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
-          redirectionPageTo: "/chap5",
           nextChapter: "Passer au chapitre suivant",
-          pathNextChapter: "/assos"
+          showCarousel: false
+        },
+        "7": {
+          currentChapter: "07",
+          chapter: "07",
+          value: 100,
+          title: "Soutenez les associations",
+          reviewChapter: "Revoir le chapitre précédent",
+          redirectionPageTo: "/chap5",
+          nextChapter: "Au revoir",
+          pathNextChapter: null,
+          showCarousel: true
         }
       }
     };
@@ -231,6 +242,6 @@ progress[value][data-v-c55e1cb4] {
 
 .container__top {
   position: absolute;
-  z-index: 999;
+  z-index: 1;
 }
 </style>
