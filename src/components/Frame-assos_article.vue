@@ -23,11 +23,9 @@ export default {
         border-radius: 0px;
         width: 100%;
         margin-bottom: 10vh;
-
         .innerContainer {
             padding: 20px;
         }
-
         h1 {
             font-size: rem($mobileH2);
             color: $white;

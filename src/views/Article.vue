@@ -85,14 +85,12 @@ export default {
   bottom: 0;
   z-index: 2;
   overflow: scroll;
-
   @include tablet-up {
     min-height: 94.3%;
   }
 }
 .content {
   padding: 32px;
-
   .textContent {
     margin: 0 0 32px 0;
     @include flexbox(column, center, center);
@@ -101,7 +99,6 @@ export default {
       text-align: left;
     }
   }
-
   video {
     width: 100%;
   }
@@ -110,7 +107,6 @@ export default {
   .content {
     padding: 48px 10vw 48px 10vw;
   }
-
   .quizzButton {
     margin-bottom: 48px;
   }
@@ -123,24 +119,20 @@ export default {
     padding: 24px 5vw;
     height: 90%;
     @include flexbox(row, space-between, center);
-
     .textContent {
       margin: 0 32px 0 0;
       max-width: 40vw;
       @include flexbox(column, center, center);
-
       .articleText {
         text-align: left;
       }
     }
     .mediaContent {
       margin: 0 0 0 32px;
-
       video {
         height: 90%;
         max-width: 45vw;
       }
-
       img {
         margin: 0 40px 32px;
         height: 350px;

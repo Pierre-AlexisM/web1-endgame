@@ -33,13 +33,11 @@ export default {
   margin-left: 15px;
   font-family: $montserrat;
   position: fixed;
-
   @include tablet-up {
     max-width: 850px;
     margin-left: 60px;
     padding: 8px 0;
   }
-
   @include desktop-up {
     position: absolute;
     margin-left: 0;
@@ -55,7 +53,6 @@ export default {
   color: $yellow;
   @include flexbox(row, flex-start, baseline);
 }
-
 .currentChapter {
   font: 600 rem(18px) $montserrat;
 
@@ -69,17 +66,14 @@ export default {
 }
 .chapter {
   font: 600 rem(10px) $montserrat;
-  // font-size: rem(8px);
   @include tablet-up {
     font-size: rem(16px);
   }
 }
-
 .title {
   color: $white;
   font-size: rem(15px);
   font-weight: bold;
-
   @include tablet-up {
     font-size: rem(32px);
   }
@@ -91,19 +85,15 @@ export default {
 .container_reviewChapter {
   @include flexbox(row, flex-start, center);
   cursor: pointer;
-
   img {
     margin-right: 8px;
   }
-
   p {
     color: $white;
     font-size: rem(10px);
-
     &:hover {
       font-weight: 600;
     }
-
     @include tablet-up {
       font-size: rem(16px);
     }
