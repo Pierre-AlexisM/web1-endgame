@@ -1,17 +1,13 @@
 <template>
-<div id="slider">
-  <transition-group tag="div" :name="transitionName" class="slides-group">
-    <div v-if="show" :key="current" class="slide" :class="slides[current].className">
-      <img :src="slides[current].img" alt=""> 
-    </div>
-  </transition-group>
-  <div class="btn btn-prev" aria-label="Previous slide" @click="slide(-1)">
-    &#10094;
+  <div id="slider">
+    <transition-group tag="div" :name="transitionName" class="slides-group">
+      <div v-if="show" :key="current" class="slide" :class="slides[current].className">
+        <img class="img-slide" :src="slides[current].img" alt />
+      </div>
+    </transition-group>
+    <div class="btn btn-prev" aria-label="Previous slide" @click="slide(-1)">&#10094;</div>
+    <div class="btn btn-next" aria-label="Next slide" @click="slide(1)">&#10095;</div>
   </div>
-  <div class="btn btn-next" aria-label="Next slide" @click="slide(1)">
-    &#10095;
-  </div>
-</div>
 </template>
 
 <script>
@@ -20,37 +16,33 @@ import Ifrecor from "@/assets/img/ifrecor.png";
 import ChasingCoral from "@/assets/img/chasing-coral_logo.png";
 
 export default {
-    name: "Carousel",
-    data() {
-        return {
-            current: 0,
-            direction: 1,
-            transitionName: "fade",
-            show: false,
-            slides: [
-            { img: CoralGuardian},
-            { img: Ifrecor },
-            { img: ChasingCoral}
-            ]
-        }
+  name: "Carousel",
+  data() {
+    return {
+      current: 0,
+      direction: 1,
+      transitionName: "fade",
+      show: false,
+      slides: [{ img: CoralGuardian }, { img: Ifrecor }, { img: ChasingCoral }]
+    };
   },
-    methods: {
+  methods: {
     slide(dir) {
       this.direction = dir;
       dir === 1
         ? (this.transitionName = "slide-next")
         : (this.transitionName = "slide-prev");
       var len = this.slides.length;
-      this.current = (this.current + dir % len + len) % len;
+      this.current = (this.current + (dir % len) + len) % len;
     }
   },
   mounted() {
     this.show = true;
   }
-}
+};
 </script>
 
-<style>
+<style scoped lang="scss">
 .fade-enter-active {
   transition: opacity 1s;
 }
@@ -110,6 +102,10 @@ export default {
   width: 50vw;
 }
 
+.slides-group {
+  overflow: hidden;
+}
+
 .btn {
   z-index: 10;
   cursor: pointer;
@@ -121,18 +117,41 @@ export default {
   width: 70px;
   height: 70px;
   position: absolute;
-  top: calc(50% - 35px);
-  left: 1%;
+  // top: calc(50% - 35px);
+  left: 3%;
   transition: transform 0.3s ease-in-out;
   user-select: none;
+
+  @include tablet-up {
+    left: 15%;
+  }
+
+  @include desktop-up {
+    left: 20%;
+  }
 }
 
 .btn-next {
   left: auto;
-  right: 1%;
+  right: 3%;
+  @include tablet-up {
+    right: 15%;
+  }
+  @include desktop-up {
+    right: 20%;
+  }
 }
 
 .btn:hover {
   transform: scale(1.1);
+}
+
+.img-slide {
+  width: 250px;
+
+  @include tablet-up {
+    min-width: 400px;
+    max-width: 450px;
+  }
 }
 </style>
