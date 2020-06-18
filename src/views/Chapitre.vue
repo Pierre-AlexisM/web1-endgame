@@ -144,7 +144,7 @@ export default {
           reviewChapter: "Revoir le chapitre précédent",
           nextChapter: "Passer au chapitre suivant",
           showButton1: true,
-          showButton2: false,
+          showButton2: true,
           showCarousel: false
         },
         "5": {
