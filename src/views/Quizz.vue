@@ -18,7 +18,6 @@
 import CrossButtonSvg from "@/components/CrossButtonSvg.vue";
 import Quizz from "@/components/Quizz.vue";
 import VraiFaux from "@/components/VraiFaux.vue";
-
 import axios from "axios";
 export default {
   components: {

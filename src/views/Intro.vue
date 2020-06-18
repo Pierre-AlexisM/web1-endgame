@@ -41,11 +41,9 @@ export default {
   max-width: 100vw;
   max-height: 100vh;
 }
-
 header {
   display: flex;
 }
-
 video {
   object-fit: cover;
   width: 100vw;

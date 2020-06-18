@@ -57,33 +57,27 @@ body {
   background-image: url(../assets/img/chapter0.png);
   overflow: hidden;
 }
-
 header {
   display: flex;
   position: relative;
   z-index: 1;
 }
-
 .iframe-map {
   width: 100vw;
   height: 140vh;
   transform: translateY(-150px);
 }
-
 .container_currentChapter {
   position: fixed;
   z-index: 1;
 }
-
 progress[value][data-v-c55e1cb4] {
   z-index: 1;
 }
-
 .place-card,
 .place-card-large {
   display: none;
 }
-
 .gm-style,
 .place-card-large {
   padding: 9px 4px 9px 11px;

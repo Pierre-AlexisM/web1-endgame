@@ -91,7 +91,6 @@ export default {
     }
   }
 }
-
 @include tablet-up {
   .content {
     padding: 48px 10vw 48px 10vw;
@@ -101,7 +100,6 @@ export default {
     margin-bottom: 48px;
   }
 }
-
 @include desktop-large {
   .quizzButton {
     margin: 48px 0;
@@ -133,12 +131,6 @@ export default {
 }
 
 @include desktop-Xlarge {
-  // .mediaContent {
-  //   img {
-  //     min-width: 800px;
-  //   }
-  // }
-
   .buttons {
     padding: 24px 32px 0px 24px;
   }

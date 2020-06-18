@@ -89,7 +89,6 @@ export default {
     min-height: 94.3%;
   }
 }
-
 .content {
   padding: 32px;
 
@@ -102,7 +101,6 @@ export default {
     }
   }
 }
-
 @include tablet-up {
   .content {
     padding: 48px 10vw 48px 10vw;
@@ -112,7 +110,6 @@ export default {
     margin-bottom: 48px;
   }
 }
-
 @include desktop-large {
   .quizzButton {
     margin: 48px 0;
@@ -131,7 +128,6 @@ export default {
         text-align: left;
       }
     }
-
     .mediaContent {
       video {
         height: 100vh;
@@ -146,7 +142,6 @@ export default {
     }
   }
 }
-
 @include desktop-Xlarge {
   .buttons {
     padding: 24px 32px 0px 24px;

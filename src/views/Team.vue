@@ -99,7 +99,6 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   object-fit: cover;
-
   h1 {
     margin: 24px auto;
     padding: 0 16px;
@@ -112,7 +111,6 @@ header {
       font: bold rem(28px) / 1.5 $montserrat;
     }
   }
-
   .teams {
     max-width: 1660px;
     margin: 0 auto;

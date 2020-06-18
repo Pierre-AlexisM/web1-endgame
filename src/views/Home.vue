@@ -52,7 +52,6 @@ export default {
   background-size: cover;
   background-position: center;
 }
-
 .outer-wrapper {
   width: 100vh;
   height: 100vw;
@@ -64,7 +63,6 @@ export default {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-
 *::-webkit-scrollbar {
   display: none;
   -webkit-appearance: none;

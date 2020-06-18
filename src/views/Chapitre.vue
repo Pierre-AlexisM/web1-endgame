@@ -205,8 +205,6 @@ export default {
             this.chapitres[6].title = response.data.data.title;
             this.chapitres[7].title = response.data.data.title;
           });
-        //  console.log(this.$el.querySelector("video"))
-        //  .play();
       }
     }
   },
