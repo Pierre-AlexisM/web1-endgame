@@ -34,7 +34,7 @@
     </section>
     <section class="container__bottom">
       <router-link :to="{ name: 'chapitre', params: { number: currentChapitre + 1 }}">
-        <NextChapterButton :msg="chapitres[currentChapitre].nextChapter" />
+        <NextChapterButton :msg="chapitres[currentChapitre].nextChapter" v-if="chapitres[currentChapitre].showButtonNext" />
       </router-link>
     </section>
 
@@ -95,6 +95,7 @@ export default {
           title: "Bienvenue dans la mer de Corail",
           reviewChapter: "Revoir l'introduction",
           redirectionPageTo: "/intro",
+          showButtonNext: true,
           nextChapter: "Passer au chapitre suivant",
           showButton1: true,
           showButton2: false,
@@ -108,6 +109,7 @@ export default {
           value: 25,
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
+          showButtonNext: true,
           nextChapter: "Passer au chapitre suivant",
           showButton1: true,
           showCarousel: false
@@ -120,6 +122,7 @@ export default {
           showButton1: true,
           showButton2: false,
           reviewChapter: "Revoir le chapitre précédent",
+          showButtonNext: true,
           nextChapter: "Passer au chapitre suivant",
           showCarousel: false
         },
@@ -129,6 +132,7 @@ export default {
           value: 50,
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
+          showButtonNext: true,
           nextChapter: "Passer au chapitre suivant",
           pathNextChapter: "/chap4",
           showButton1: true,
@@ -142,6 +146,7 @@ export default {
           value: 60,
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
+          showButtonNext: true,
           nextChapter: "Passer au chapitre suivant",
           showButton1: true,
           showButton2: true,
@@ -153,6 +158,7 @@ export default {
           value: 75,
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
+          showButtonNext: true,
           nextChapter: "Passer au chapitre suivant",
           showButton1: true,
           showButton2: true,
@@ -164,6 +170,7 @@ export default {
           value: 90,
           title: null,
           reviewChapter: "Revoir le chapitre précédent",
+          showButtonNext: true,
           nextChapter: "Passer au chapitre suivant",
           showButton1: true,
           showButton2: false,
@@ -175,10 +182,11 @@ export default {
           value: 100,
           title: "Soutenez les associations",
           reviewChapter: "Revoir le chapitre précédent",
-          redirectionPageTo: "/chap5",
+          showButtonNext: false,
+          redirectionPageTo: null,
           showButton1: false,
           showButton2: false,
-          nextChapter: "Au revoir",
+          nextChapter: null,
           pathNextChapter: null,
           showCarousel: true
         }
