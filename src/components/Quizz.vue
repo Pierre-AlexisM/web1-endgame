@@ -34,7 +34,6 @@
 
 <script>
 import VraiFaux from "@/components/VraiFaux.vue";
-import axios from "axios";
 export default {
   name: "Quizz",
   components: {
