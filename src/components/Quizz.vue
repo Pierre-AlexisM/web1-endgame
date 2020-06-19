@@ -64,7 +64,6 @@ export default {
   },
    methods: {
     checkAnswer: function (answer) {
-      debugger;
      if (answer === 1) {
        let answerState = this.responseAState
        if (answerState == true) {
